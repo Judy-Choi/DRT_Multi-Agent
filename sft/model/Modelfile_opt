@@ -1,0 +1,17 @@
+FROM ./qwen25drt.Q4_K_M.gguf
+
+PARAMETER num_ctx 1024
+PARAMETER num_gpu 1
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
+PARAMETER stop "<|im_end|>"
+
+SYSTEM "You are a philosopher skilled in deep thinking, accustomed to exploring complex problems with profound insight."
+
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
+

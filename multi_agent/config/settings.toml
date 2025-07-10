@@ -1,0 +1,21 @@
+# 번역 시스템 설정
+
+[llm]
+# 사용 가능한 모델: 
+# - gpt-4o
+# - gpt-4-turbo
+# - gpt-3.5-turbo
+# - claude-3-opus-20240229
+# - claude-3-sonnet-20240229
+# - claude-3-haiku-20240307
+model = "claude-3-haiku-20240307"
+fallback_model = "gpt-3.5-turbo"
+temperature = 0.0
+max_tokens = 1024  # 출력 토큰 수 제한 (512, 1024, 2048 권장)
+
+[translation]
+# 반복 최대 횟수  
+max_iterations = 2
+
+[logging]
+level = "INFO" 

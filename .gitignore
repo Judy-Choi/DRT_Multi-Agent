@@ -1,0 +1,7 @@
+.DS_Store
+.env
+__pycache__/
+*.py[cod]
+.vscode/
+.venv/
+qwen25drt.Q4_K_M.gguf
